@@ -1,0 +1,39 @@
+img.icon {
+  height: 48px;
+  width: 48px;
+}
+
+img.small-icon {
+  height: 32px;
+  width: 32px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.vertical-centered {
+  display: flex;
+  align-items: center;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
