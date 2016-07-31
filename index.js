@@ -156,7 +156,14 @@ const SchoolListing = React.createClass({
 
 const ProjectsListing = React.createClass({
   getInitialState() {
-    var entries = [
+    var entries1 = [
+      {
+        name: 'BabylonJS',
+        image: 'img/babylonjs.png',
+        url: 'http://www.babylonjs.com/',
+      },
+    ]
+    var entries2 = [
       {
         name: 'React',
         image: 'img/react.png',
@@ -176,8 +183,24 @@ const ProjectsListing = React.createClass({
     return {
       data: [
         {
+          heading: 'music-visualizer.js',
+          template: (
+            <div>
+              <p>Ongoing music visualizer project</p>
+              <ListGroup entries={entries1}/>
+            </div>
+          ),
+          image: 'img/music.ico',
+          url: 'https://dogbox.github.io/music-visualizer.js/',
+        },
+        {
           heading: 'dogbox.github.io',
-          template: <div><p>Learning front-end development</p><ListGroup entries={entries}/></div>,
+          template: (
+            <div>
+              <p>Learning front-end development</p>
+              <ListGroup entries={entries2}/>
+            </div>
+          ),
           image: 'img/site.png',
           url: 'https://dogbox.github.io/',
         }
