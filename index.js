@@ -11,17 +11,14 @@ const About = React.createClass({
         {
           image: 'img/bike.jpg',
           caption: 'Life on the edge',
-          id: 0,
         },
         {
           image: 'img/titan.jpg',
           caption: 'Survey Corps',
-          id: 1,
         },
         {
           image: 'img/cello.jpg',
           caption: 'Classy and refined',
-          id: 2,
         },
       ]
     };
@@ -93,6 +90,12 @@ const WorkListing = React.createClass({
   getInitialState() {
     return {
       data: [
+        {
+          heading: 'Stripe',
+          template: <div>Software engineer<br/>August 2016 - current</div>,
+          image: 'img/stripe.png',
+          url: 'https://stripe.com/',
+        },
         {
           heading: 'Quora',
           template: <div>Software engineer<br/>July 2012 to January 2016</div>,
@@ -186,7 +189,7 @@ const ProjectsListing = React.createClass({
           heading: 'music-visualizer.js',
           template: (
             <div>
-              <p>Ongoing music visualizer project</p>
+              <p>Music visualizer project (WIP)</p>
               <ListGroup entries={entries1}/>
             </div>
           ),
