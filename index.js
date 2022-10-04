@@ -241,45 +241,6 @@ const ListGroup = React.createClass({
   }
 });
 
-const Footer = React.createClass({
-  getInitialState() {
-    return {
-      buttons: [
-        {
-          class: 'fa-facebook',
-          url: 'https://www.facebook.com/sliao',
-        },
-        {
-          class: 'fa-linkedin',
-          url: 'https://www.linkedin.com/in/scott-liao-99673355',
-        },
-        {
-          class: 'fa-github',
-          url: 'https://github.com/dogbox',
-        },
-        {
-          class: 'fa-steam',
-          url: 'http://steamcommunity.com/profiles/76561198019653821/',
-        },
-      ]};
-  },
-
-  render() {
-    return (
-      <ul className="btn-group" role="group">
-      {
-        this.state.buttons.map(function(button, i) {
-          var class_name = 'btn btn-default fa fa-lg ' + button.class;
-          return (
-            <a href={button.url} target="_blank" key={i} className={class_name}/>
-          );
-        })
-      }
-      </ul>
-    );
-  }
-});
-
 const appHistory = ReactRouter.useRouterHistory(History.createHashHistory)({queryKey: false})
 
 ReactDOM.render((
@@ -293,5 +254,3 @@ ReactDOM.render((
     </Route>
   </Router>
 ), $('#view')[0]);
-
-ReactDOM.render(<Footer/>, $('#social_buttons')[0]);
