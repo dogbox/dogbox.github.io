@@ -1,3 +1,4 @@
 node_modules/
 bower.json
 package.json
+.DS_Store

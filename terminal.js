@@ -6,11 +6,10 @@ var TerminalHandler = function() {
   self.help = function() {
     var message = `
 Commands:
-  ${format_text('help', 'b')}:      halp pls
-  ${format_text('about', 'b')}:     me!
-  ${format_text('work', 'b')}:      i did some work
-  ${format_text('school', 'b')}:    i went to school
-  ${format_text('projects', 'b')}:  i made some projects
+  ${format_text('help', 'b')}:      list these commands
+  ${format_text('about', 'b')}:     about
+  ${format_text('work', 'b')}:      not a NEET
+  ${format_text('projects', 'b')}:  stuff i did for funsies
 
     `;
     this.echo(message);
@@ -22,7 +21,7 @@ Commands:
     };
   }
 
-  var commands = ['about', 'work', 'school', 'projects'];
+  var commands = ['about', 'work', 'projects'];
   for (var i in commands) {
     self[commands[i]] = execute(commands[i]);
   }
